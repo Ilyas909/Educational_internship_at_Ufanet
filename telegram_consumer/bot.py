@@ -7,7 +7,7 @@ from telegram.ext import Application, CommandHandler, ContextTypes
 from aiokafka import AIOKafkaConsumer
 
 # --- Конфигурация ---
-TELEGRAM_BOT_TOKEN = "ВАШ ТОКЕН"
+TELEGRAM_BOT_TOKEN = "YOUR_TELEGRAM_BOT_TOKEN"
 if not TELEGRAM_BOT_TOKEN:
     raise ValueError("TELEGRAM_BOT_TOKEN не задан!")
 
