@@ -19,7 +19,7 @@
 
 ```bash
 git clone git@github.com:Ilyas909/Educational_internship_at_Ufanet.git
-cd ufanet_practika
+cd Educational_internship_at_Ufanet
 ```
 
 ### 🔐 2. Настройка Telegram Bot
