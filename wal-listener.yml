@@ -1,0 +1,32 @@
+listener:
+  slotName: "wal_listener_slot"
+  refreshConnection: "30s"
+  heartbeatInterval: "10s"
+  filter:
+    tables:
+      cards:
+        - insert
+        - update
+        - delete
+      sections:
+        - insert
+        - update
+        - delete
+
+logger:
+  level: "info"
+  format: "json"
+
+database:
+  host: "postgres"
+  port: 5432
+  name: "partners"
+  user: "partner_user"
+  password: "partner_pass"
+  debug: false
+
+publisher:
+  type: "kafka"
+  address: "kafka:9092"
+  topic: "partner_db_events"
+  topicPrefix: ""

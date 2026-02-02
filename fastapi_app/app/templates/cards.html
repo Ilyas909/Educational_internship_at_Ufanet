@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Карточки</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<header>
+    <button onclick="history.back()">← Назад</button>
+    <h1 id="section-title"></h1>
+    <button onclick="addCard()">➕ Добавить карточку</button>
+</header>
+
+<div class="grid" id="cards"></div>
+
+<!-- МОДАЛЬНОЕ ОКНО -->
+<div id="modal" class="modal hidden" onclick="closeModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <input id="title" placeholder="Название *">
+        <div id="title-error" class="error-message"></div>
+
+        <input id="company" placeholder="Компания *">
+        <div id="company-error" class="error-message"></div>
+
+        <input id="promo" placeholder="Промокод (необязательно)">
+
+        <input id="commission" placeholder="Скидка % *">
+        <div id="commission-error" class="error-message"></div>
+
+        <input type="date" id="start">
+        <div id="start-error" class="error-message"></div>
+
+        <input type="date" id="end">
+        <div id="end-error" class="error-message"></div>
+
+        <button id="save-btn" disabled onclick="saveCard()">💾 Сохранить</button>
+    </div>
+</div>
+
+<script>
+    const SECTION_ID = {{ section_id }};
+</script>
+<script src="/static/js/cards.js"></script>
+
+</body>
+</html>

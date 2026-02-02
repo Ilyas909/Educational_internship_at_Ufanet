@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Категории</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Категории</h1>
+    <button class="primary" onclick="openCreateSectionModal()">➕ Добавить секцию</button>
+
+    <!-- CREATE SECTION MODAL -->
+    <div id="create-section-modal" class="modal hidden" onclick="closeCreateSectionModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <h3>Новая секция</h3>
+            <input id="new-section-title" placeholder="Название секции" oninput="validateCreateSection()">
+            <p id="create-section-error" class="error hidden">Название не может быть пустым</p>
+            <button id="create-section-btn" onclick="createSection()" disabled>➕ Создать</button>
+        </div>
+    </div>
+
+</header>
+
+<div class="grid" id="sections"></div>
+
+<div id="section-modal" class="modal hidden" onclick="closeSectionModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <h3>Переименовать секцию</h3>
+        <input id="section-title-input" placeholder="Название секции">
+        <button onclick="saveSectionTitle()">💾 Сохранить</button>
+    </div>
+</div>
+
+<script src="/static/js/sections.js"></script>
+</body>
+</html>

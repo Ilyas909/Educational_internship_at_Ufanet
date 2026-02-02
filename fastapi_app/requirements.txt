@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+jinja2
+sqlalchemy[asyncio]
+asyncpg
+databases
+python-multipart
+confluent-kafka
+pydantic
+pytest
+httpx
+pytest-asyncio
+aiosqlite

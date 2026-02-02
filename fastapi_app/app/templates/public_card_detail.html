@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Детали акции</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/public.css">
+</head>
+<body>
+  <header>
+    <button class="back" onclick="history.back()">← Назад</button>
+    <h1>Детали акции</h1>
+  </header>
+  <div id="card-detail"></div>
+  <script>
+    const CARD_ID = {{ card_id }};
+  </script>
+  <script src="/static/js/public_card_detail.js"></script>
+</body>
+</html>
